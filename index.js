@@ -12,7 +12,7 @@ const questions = [
   "License:",
   "Contribution guidelines:",
   "Test instructions:",
-  "Githihub user:",
+  "Github user:",
   "Email:",
 ];
 
@@ -47,7 +47,7 @@ const promptUser = () => {
     },
     {
       type: "input",
-      name: "ContributionProject",
+      name: "contributionProject",
       message: `${questions[5]}`,
     },
     {
@@ -57,7 +57,7 @@ const promptUser = () => {
     },
     {
       type: "input",
-      name: "githubUser",
+      name: "GithubUser",
       message: `${questions[7]}`,
     },
     {
@@ -70,12 +70,59 @@ const promptUser = () => {
 
 // Generate the README file
 
-const generateReadme = ({ projectName, descriptionProject }) =>
-  `README ${projectName}
-Pdpdpd ${descriptionProject}`;
+const generateReadme = ({
+  projectName,
+  descriptionProject,
+  installationProject,
+  usageProject,
+  licenseProject,
+  contributionProject,
+  testProject,
+  GithubUser,
+  emailUser,
+}) =>
+  `# ${projectName}
 
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
+## License Badge
+
+## Description
+
+${descriptionProject}
+
+## Table of contents:
+
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [License](#license)
+4. [Contributing](#contributing)
+5. [Test](test)
+6. [Questions](#questions)
+
+## Installation
+
+${installationProject}
+
+## Usage
+
+${usageProject}
+
+## License
+
+${licenseProject}
+
+## Contributing
+
+${contributionProject}
+
+## Test
+
+${testProject}
+
+## Questions
+
+[GitHub profile](http://github.com/${GithubUser})
+
+[Contact Me](mailto:${emailUser})`;
 
 const init = () => {
   promptUser()
