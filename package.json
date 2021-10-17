@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/PFZM/README-Generator#readme",
   "dependencies": {
+    "inquire": "^0.4.8",
     "inquirer": "^8.2.0"
   }
 }
