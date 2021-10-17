@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
       return "https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg";
     case "GNU GPLv3":
       return "https://img.shields.io/badge/License-LGPL%20v3-blue.svg";
-    case "Unlicense ":
+    case "Unlicense":
       return "https://img.shields.io/badge/license-Unlicense-blue.svg";
     default:
       return "";
@@ -33,10 +33,18 @@ function renderLicenseLink(license) {
       return "https://opensource.org/licenses/MPL-2.0";
     case "GNU GPLv3":
       return "https://www.gnu.org/licenses/gpl-3.0";
-    case "Unlicense ":
+    case "Unlicense":
       return "http://unlicense.org/";
     default:
       return "";
+  }
+}
+
+function renderLicenseText(licence) {
+  if (licence === "Unlicense") {
+    return "This project is unlicensed";
+  } else {
+    return `This project is covered under the ${licence} license.`;
   }
 }
 
@@ -44,4 +52,5 @@ function renderLicenseLink(license) {
 module.exports = {
   renderLicenseBadge,
   renderLicenseLink,
+  renderLicenseText,
 };

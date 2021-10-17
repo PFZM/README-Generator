@@ -90,8 +90,6 @@ const generateReadme = ({
 }) =>
   `# ${projectName}
 
-## License Badge
-
 [![License: ${licenseProject}](${license.renderLicenseBadge(
     licenseProject
   )})](${license.renderLicenseLink(licenseProject)})
@@ -119,7 +117,7 @@ ${usageProject}
 
 ## License
 
-${licenseProject}
+${license.renderLicenseText(licenseProject)}
 
 ## Contributing
 
@@ -133,7 +131,7 @@ ${testProject}
 
 [GitHub profile](http://github.com/${GithubUser})
 
-[Contact Me](mailto:${emailUser})`;
+[Contact Me - Email](mailto:${emailUser})`;
 
 const init = () => {
   promptUser()
