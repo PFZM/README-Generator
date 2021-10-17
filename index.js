@@ -1,7 +1,7 @@
 //Packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-// const badge = require("./utils/generateBadge");
+const license = require("./generateLicense.js");
 
 // Array of questions for user input
 const questions = [
@@ -43,7 +43,14 @@ const promptUser = () => {
       type: "list",
       name: "licenseProject",
       message: `${questions[4]}`,
-      choices: ["MIT", "GNU GPLv3"],
+      choices: [
+        "Apache 2.0",
+        "ISC",
+        "MIT",
+        "Mozilla 2.0",
+        "GNU GPLv3",
+        "Unlicense",
+      ],
     },
     {
       type: "input",
@@ -84,6 +91,10 @@ const generateReadme = ({
   `# ${projectName}
 
 ## License Badge
+
+[![License: ${licenseProject}](${license.renderLicenseBadge(
+    licenseProject
+  )})](${license.renderLicenseLink(licenseProject)})
 
 ## Description
 
