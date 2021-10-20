@@ -53,7 +53,7 @@ const promptUser = () => {
       ],
     },
     {
-      type: "checkbow",
+      type: "list",
       name: "contributionProject",
       message: `${questions[5]}`,
       choices: ["Yes", "No"],
@@ -141,7 +141,9 @@ ${testProject}
 
 const init = () => {
   promptUser()
-    .then((answers) => fs.writeFileSync("README.MD", generateReadme(answers)))
+    .then((answers) =>
+      fs.writeFileSync("README-Example.md", generateReadme(answers))
+    )
     .then(() => console.log("README created successfully"))
     .catch((err) => console.error(err));
 };

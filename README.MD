@@ -2,6 +2,10 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## Link to see the deployed application:
+
+[YouTube video](https://youtu.be/rVbs-ZAvmZA)
+
 ## Description
 
 This README was created using this App.
@@ -38,6 +42,9 @@ Questions will be prompt, answer all the questions and at the end a `README.md` 
 This project is covered under the MIT license.
 
 ## Contributing
+
+When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
+Please note we have a code of conduct, please follow it in all your interactions with the project.
 
 ## Test
 

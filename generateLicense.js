@@ -1,6 +1,6 @@
 // License Markdown
 
-// Function to render licence badge selected
+// Function to render license badge selected
 function renderLicenseBadge(license) {
   switch (license) {
     case "Apache 2.0":
@@ -20,7 +20,7 @@ function renderLicenseBadge(license) {
   }
 }
 
-// Function to render lecense link
+// Function to render license link
 function renderLicenseLink(license) {
   switch (license) {
     case "Apache 2.0":
