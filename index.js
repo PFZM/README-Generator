@@ -10,7 +10,7 @@ const questions = [
   "Installations instructions:",
   "Usage information:",
   "License:",
-  "Contribution guidelines:",
+  "Does this project accept contributions?",
   "Test instructions:",
   "Github user:",
   "Email:",
@@ -53,9 +53,10 @@ const promptUser = () => {
       ],
     },
     {
-      type: "input",
+      type: "checkbow",
       name: "contributionProject",
       message: `${questions[5]}`,
+      choices: ["Yes", "No"],
     },
     {
       type: "input",
@@ -121,7 +122,12 @@ ${license.renderLicenseText(licenseProject)}
 
 ## Contributing
 
-${contributionProject}
+Contributions accepted? ${contributionProject}
+
+When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
+Please note we have a code of conduct, please follow it in all your interactions with the project.
+Contributions follow the [Contributor Convenant](http://contributor-covenant.org/version/1/4/).
+
 
 ## Test
 
